@@ -168,7 +168,7 @@ export function TextSelectionMenu() {
 
           <div className="space-y-4">
             <div>
-              <h3 className="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/70"  style={{marginTop: '-18px'}}>
+              <h3 className="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/70"  style={{marginTop: '-20.89px'}}>
                 {definition.word}
               </h3>
               <div className="flex gap-2 mt-1">
