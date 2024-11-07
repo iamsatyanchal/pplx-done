@@ -8,7 +8,7 @@ import { SearchInput } from '@/components/search/SearchInput';
 
 export default function HomePage() {
   const [query, setQuery] = useState('');
-  const [imageSearch, setImageSearch] = useState(true);
+  const [imageSearch, setImageSearch] = useState(false);
   const [selectedModel, setSelectedModel] = useState('mixtral');
   const navigate = useNavigate();
 
