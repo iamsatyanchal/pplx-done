@@ -159,15 +159,16 @@ export function TextSelectionMenu() {
           <Button
             variant="ghost"
             size="icon"
-            className="absolute right-2 top-2 h-8 w-8 hover:bg-destructive/10 hover:text-destructive"
+            className="border absolute right-2 top-2 h-8 w-8 hover:bg-destructive/10 hover:text-destructive"
             onClick={() => setShowDefinition(false)}
+            style={{marginRight: '7px', marginTop: '7px'}}
           >
             <X className="h-4 w-4" />
           </Button>
 
           <div className="space-y-4">
             <div>
-              <h3 className="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/70">
+              <h3 className="font-display text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/70"  style={{marginTop: '-18px'}}>
                 {definition.word}
               </h3>
               <div className="flex gap-2 mt-1">
@@ -189,7 +190,7 @@ export function TextSelectionMenu() {
             </div>
 
             <div className="space-y-3">
-              {definition.meanings[selectedMeaningIndex].definitions.map((def, index) => (
+              {definition.meanings[selectedMeaningIndex].definitions.slice(0, 2).map((def, index) => (
                 <div key={index} className="space-y-1">
                   <p className="text-sm leading-relaxed">
                     {index + 1}. {def.definition}
