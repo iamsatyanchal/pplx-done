@@ -452,15 +452,15 @@ export default function SearchResults() {
       }
       )}
       if (selectedModel == "online") { 
-        var response = await fetch('https://red-panda-v1.koyeb.app/answeron', {
+        var response = await fetch('https://red-panda-server-1.koyeb.app/get_search', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          query,
+          query /*,
           model: 'llama-3.1-70b',
           history: messages
             .filter((msg) => !msg.isStreaming)
-            .map(({ role, content }) => ({ role, content })),
+            .map(({ role, content }) => ({ role, content })),*/
         }),
         signal: abortControllerRef.current.signal,
       }
